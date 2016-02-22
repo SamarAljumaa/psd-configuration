@@ -1,0 +1,146 @@
+.footer{
+	.clients{
+		background: $bodyColor;
+		padding: 25px;
+		.wrapper{
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-around;
+			img{
+				// flex-shrink: 1;
+				// width: 100%;
+				padding: 10px;
+			}
+		}
+	}
+	.contact{
+		background: #2D3036;
+		color: white;
+		padding: 25px;
+		.wrapper{
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-around;
+			.address, .latest, .tags, .social{
+				flex-basis: 23%;
+
+				h2{
+					color: white;
+			    font-family: "Playfair Display", serif;
+			    font-style: italic;
+			    font-size: 2.2rem;
+			    text-transform: none;
+			    // margin: 0;
+				}
+				h5{
+					font-size: 1.4rem;
+					font-weight: 300;
+					// padding-left: 20px;
+				}
+				p{
+					color: white;
+					font-family: $secondaryFont;
+				}
+			}
+			.address{
+				display: flex;
+				flex-direction: column;
+				position: relative;
+				// justify-content: space-around;
+				p{
+					margin: 0;
+					line-height: 1.5rem;
+				}
+				p:last-child{
+					position: absolute;
+					bottom: 0;
+				}
+			}
+			.latest{
+				ul{
+					padding-left: 20px;
+				}
+				ul li{
+					line-height: 2rem;
+					list-style-type: square;
+					color: $mainColor;
+					font-family: $secondaryFont;
+					span{
+						color: white;
+					}
+				}
+			}
+			.tags{
+				ul{
+					display: flex;
+					flex-flow: row wrap;
+					padding-left: 0;
+					margin:0;
+					li{
+						// font-size: 1.4rem;
+						font-family: $secondaryFont;
+						padding: 5px 8px;
+    				background: $bodyColor;
+    				margin:.7%;
+    				transition: all 1s;
+					}
+					li:hover{
+						background: $mainColor;
+					}
+				}
+			}
+		}
+		.social{
+			ul{
+				padding-left: 0;
+				margin-left: 0;
+				display: flex;
+				flex-flow: row wrap;
+				li{
+					display: flex;
+					width: 25px;
+					height: 25px;
+					margin: 2%;
+					border-radius: 50%;
+					border:1px solid white;
+					transition: all 1s;
+					i{
+						font-size: 1.4rem;
+						margin:auto;
+						transition: all 1s;
+					}	
+				}
+				li:hover{
+					border:1px solid $mainColor;
+					i{
+						color:$mainColor;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px){
+	.footer .contact .wrapper{
+		.address, .latest, .tags, .social{
+			flex-basis: 50%;
+			padding: 15px;
+		}
+	}
+}
+
+@media (max-width: 480px){
+	.footer .contact .wrapper{
+		.address, .latest, .tags, .social{
+			flex-basis: 100%;
+			padding: 5px;
+		}
+		.address p:last-child{
+			position: static;
+		}
+		.address p{
+			line-height: 2rem;
+		}
+	}
+}

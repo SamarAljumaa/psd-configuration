@@ -1,0 +1,119 @@
+.header{
+	background: linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ), url(../Images/hero1.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover; 
+	height: 100vh;
+	color: white;
+	.wrapper{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+		.topNav{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			padding-top: 25px;
+			h2{
+				color: white;
+				font-family: $secondaryFont;
+				font-style: italic;
+				font-size: 3rem;
+				text-transform: none;
+				margin:0;
+				flex-basis: 40%;
+				padding-left: 15px;
+			}
+			.hamburger{
+				color: white;
+				display: none;
+				.fa{
+					font-size: 3rem;
+				}
+			}
+			ul{
+				display: flex;
+				flex-flow: row wrap;
+				margin: 0;
+				padding-left: 0;
+				justify-content: space-around;
+    		flex-basis: 45%;
+				li{
+					a{
+						color: white;
+						padding: 5px 10px;
+						font-size: 1.5rem;
+						border: 2px solid transparent;
+						transition: all 1s;
+					}
+					a:hover{
+						border: 2px solid white;
+					}
+				}
+			}
+		}
+		@media (max-width: 750px){
+			.topNav{
+				display: block;
+				position: fixed;
+				width: 100%;
+				background: rgba(0,0,0,.45);
+				z-index: 999;
+			}
+			.topNav h2{
+				width: 50%;
+    		float: left;
+			}
+			.topNav .hamburger{
+				display: block;
+				text-align: right;
+				margin-right: 10%;
+				float: right;
+    		width: 40%;
+
+			}
+			.topNav ul{
+				display: none;
+    		clear: both;
+    		width: 100%;
+    		li{
+    			width: 100%;
+    			border-bottom: 2px solid white;
+    			a{
+    				display: block;
+    				text-align: center;
+						font-size: 2rem;
+    			}
+    			a:hover{
+    				border: 2px solid transparent;
+    			}
+    		}
+			}
+		}
+		.mainHeader{
+			align-self: center;
+    	margin: auto;
+    	text-align: center;
+    	h3{
+    		margin-top: 0;
+				font-size: 2rem; 
+				font-style: italic;
+				font-family: $secondaryFont;
+    	}
+    	h1{
+				font-size: 4.5rem;
+				font-weight: 200;
+				margin:0;
+    	}
+    	h4{
+				font-size: 1.2rem; 
+				font-weight: 200;
+    	}
+		}			
+	}
+}

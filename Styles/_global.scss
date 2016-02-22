@@ -1,0 +1,86 @@
+// <i class="fa fa-magic"></i>
+// <i class="fa fa-code"></i>
+// <i class="fa fa-bolt"></i>
+// <i class="fa fa-mobile"></i>
+// <i class="fa fa-camera"></i>
+// <i class="fa fa-video-camera"></i>
+// <i class="fa fa-picture-o"></i>
+// <i class="fa fa-eye"></i>
+// <i class="fa fa-bullhorn"></i>
+// <i class="fa fa-facebook"></i>
+// <i class="fa fa-twitter"></i>
+// <i class="fa fa-instagram"></i>
+// <i class="fa fa-dribbble"></i>
+// <i class="fa fa-rss"></i>
+
+// font-family: 'Playfair Display', serif;
+// font-family: 'Oswald', sans-serif;
+
+// color palette: #63A69F, #88BBB5, #4C4C4C, #808080, #FFFDFD,
+
+// Color on Hover and design: #63A69F
+// Font Color:#4C4C4C
+// smaller p tags #808080
+// header#FFFDFD
+
+// #FFF
+// #808080 - Light Grey (also the bg colour for the section above footer)
+// #4c4c4c - Dark Grey
+// #63a69f - Turquoise/Green(!?!)
+// #2f3035 - Footer bg colour
+
+/* Portrait tablet and small desktops */
+// @media (max-width: 940px) {}
+
+/* Landscape phone to portrait tablet */
+// @media (max-width: 768px) {}
+
+/* Landscape phones and down */
+// @media (max-width: 480px) {}
+
+$mainFont:'Oswald', sans-serif;
+$secondaryFont:'Playfair Display', serif;
+$mainColor:#63A69F;
+$bodyColor:#808080;
+$headerColor:#4C4C4C;
+
+
+html{
+	font-size: 62.5%
+}
+
+// section{
+// 	width: 1200px;
+// }
+
+.section{
+	max-width: 1200px;
+}
+
+.wrapper{
+	max-width: 1080px;
+	margin:0 auto;
+}
+
+h1, h2, h4, h5{
+	text-transform: uppercase;
+}
+
+h3{
+	font-size: 1.4rem;
+}
+
+p{
+	font-size: 1.2rem;
+	color:$bodyColor;
+}
+
+ul{
+	li{
+		font-size: 1.2rem;
+		list-style-type: none;
+	}
+}
+a{
+	text-decoration: none;
+}

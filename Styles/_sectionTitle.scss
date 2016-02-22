@@ -1,0 +1,55 @@
+.sectionTitle{
+	margin:0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	h3{
+		font-family: $secondaryFont;
+		font-style: italic;
+		color:$bodyColor;
+		margin:0;
+		padding-top: 35px;
+	}
+	h2{
+		color:$headerColor;
+		font-size: 3.2rem;
+		margin:0;
+		padding: 10px;
+		text-align: center;
+	}
+	div.dots{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		// width: 30px;
+    margin: auto;
+
+		.dot{
+			width: 5px;
+			height: 5px;
+			background: $mainColor;
+			margin:5px;
+		}
+	}
+	h4{
+		color: white;
+		border:3px solid white;
+		padding: 20px 45px;
+		transition: all 1s;
+		font-size: 1.2rem;
+	}
+	h4:hover{
+		color:$mainColor;
+		border:3px solid $mainColor;
+	}
+}
+
+@media (max-width: 700px){
+	.sectionTitle h2{
+		font-size: 2.5rem;
+	}
+	.sectionTitle h4{
+		padding: 10px 20px;
+	}
+			
+}

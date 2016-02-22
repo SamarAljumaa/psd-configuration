@@ -1,0 +1,62 @@
+.stats{
+	background-image: url(../Images/bg11.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 100%;
+	.wrapper{
+		ul{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			margin: 0;
+			padding: 30px 0;
+		}
+		li{
+			p{
+				margin:0;
+				text-align: center;
+			}
+			p:first-child{
+				color: $mainColor;
+				font-size: 8rem;
+				font-weight: 800;
+			}
+			p:last-child{
+				font-family: $secondaryFont;
+				font-style: italic;
+				color: white;
+				font-size: 2.5rem;
+				text-transform: lowercase;
+			}
+		}
+	}
+}
+@media (max-width: 768px){
+	.stats .wrapper ul li{
+		width: 25%;
+	}			
+	.stats .wrapper ul li p:first-child{
+		font-size: 6rem;
+	}
+	.stats .wrapper ul li p:last-child{
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 560px){
+	.stats .wrapper ul li p:first-child{
+		font-size: 5rem;
+	}
+	.stats .wrapper ul li p:last-child{
+		font-size: 1.7rem;
+	}
+}
+
+@media (max-width: 460px){
+	.stats .wrapper ul li p:first-child{
+		font-size: 4rem;
+	}
+	.stats .wrapper ul li p:last-child{
+		font-size: 1.4rem;
+	}
+}

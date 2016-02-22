@@ -1,0 +1,19 @@
+.keyhole{
+	background-image: linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)), url(../Images/bg2.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+  background-size: cover;
+  .sectionTitle{
+  	h2, h3{
+  		color:white;
+  	}
+    h4{
+      cursor: pointer;
+    }
+  	// h3{
+  	// 	padding-top: 2%;
+  	// }
+  }	
+}

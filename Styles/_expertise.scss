@@ -1,0 +1,187 @@
+.expertise{
+	ul{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		margin: 0;
+		padding-left: 0;
+		li{
+			position: relative;
+			width: 25%;
+			height: 25%;
+			img{
+				display: block;
+				width: 100%;
+			}
+			.expertiseOverlay{
+				width: 50%;
+				height: 50%;
+				border-radius: 50%;
+				@include centerer;
+				opacity: .75;
+				background: $mainColor;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				transition: all .5s;
+				p{
+					text-align: center;
+					margin: 0;
+					color: white;
+					font-size: 1.5rem;
+					text-transform: uppercase;
+					// z-index: 9999;
+					// padding: 5px;
+				}
+			}
+			.expertiseInfo{
+				position: absolute;
+			  height: 100%;
+		    width: 100%;
+		    top: 0;
+		    bottom: 0;  
+			  opacity: 0;
+			  transition: all .5s;
+				p, h4{
+					color: white;
+					position: absolute;
+			    left: 50%;
+			    transform: translate(-50%, 0%);
+			    opacity: 0;
+			    transition: all .5s;
+				}
+				p{
+					top: 60%;
+					font-size: 1.2rem;
+					font-family: $secondaryFont;
+				}
+				h4{
+					top: 80%;
+					text-transform: uppercase;
+					padding: 5px 15px;
+					border:2px solid white;
+					cursor: pointer;
+				}
+			}
+		}
+		li:hover .expertiseOverlay{
+			width: 90%;
+			height:90%;
+			border-radius: 0;
+			// flex-direction: row;
+			// justify-content: space-around;
+			// padding-top: 50px;
+			// align-items: baseline;
+		}
+		li:hover .expertiseInfo{
+			opacity: 1;
+		}
+		li:hover .expertiseInfo h4{
+			opacity: 1;
+		}
+		li:hover .expertiseInfo p{
+			opacity: 1;
+		}
+		@media (max-width: 1300px) {
+			li .expertiseInfo p{
+				width:70%;
+				top:55%;
+			}
+			li .expertiseInfo h4{
+				top:77%;
+			}
+		}
+		@media (max-width: 1007px) {
+			li .expertiseInfo p{
+				width:85%;
+			}
+		}
+		@media (max-width: 940px) {
+			li{
+				padding: 5px;
+			}
+			li .expertiseOverlay{
+				background: transparent;
+				top:25%;
+			}
+			li .expertiseInfo{
+				position: static;
+		    text-align: center;
+		    margin: 0 auto;
+		    background: #63A69F;
+		    opacity: 1;
+			}
+			li .expertiseInfo p, li .expertiseInfo h4{
+				position: static;
+				margin: 0 auto;
+    		padding-top: 10px;
+    		left: 0;
+			  transform: none;
+			  display: block;
+			  opacity: 1;
+			}
+			li .expertiseInfo h4{
+				border:2px solid transparent;
+			}
+		}
+	}
+
+	.wrapper{
+		.skills{
+			display: flex;
+			flex-flow: row wrap;
+			align-content: center;
+			justify-content: center;
+			padding: 20px 0;
+			.skill{
+				flex-basis: 15%;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				// justify-content: space-between;
+				align-items: center;
+				margin: 1%;
+			}
+		}
+	}
+}
+
+@media (max-width: 940px){
+	.expertise .wrapper .skills .skill{
+		flex-basis: 20%;
+	}
+}
+
+@media (max-width: 768px){
+	.expertise .wrapper .skills .skill{
+		flex-basis: 40%;
+		padding: 10px;
+	}
+	.expertise .wrapper .skills .skill h4{
+		margin-bottom: 0;
+	}
+}
+
+@media (max-width: 480px){
+	.expertise .wrapper .skills .skill{
+		flex-direction: row;
+    flex-flow: row wrap;
+	}
+	.expertise .wrapper .skills .skill h4{
+		width: 50%;
+    padding-left: 10px;
+    margin: 0;
+	}	
+	.expertise .wrapper .skills .skill p{
+		
+		text-align: left;
+	}	
+}
+
+@media (max-width: 768px){
+	section.expertise ul li{
+		width: 50%;
+		height: 50%;
+		padding: 10px;
+	}
+}
